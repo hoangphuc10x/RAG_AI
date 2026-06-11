@@ -1,0 +1,19 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# macOS
+.DS_Store
+
+# Docs
+/docs
+
+# Environment / secrets
+.env
+*.env
