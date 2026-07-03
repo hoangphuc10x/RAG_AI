@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="logo">📚</div>
+      <div>
+        <h1>RAG Chatbot</h1>
+        <p>Chat with your documents — grounded, local, and private.</p>
+      </div>
+    </header>
+
+    <div class="card upload">
+      <div class="label"><span class="badge">1</span> Upload a PDF</div>
+      <div class="dz-wrap">
+        <div class="dropzone" id="dropzone">
+          <div class="dz-icon" id="dzIcon">⬆️</div>
+          <div class="dz-text">
+            <div class="t1" id="dzTitle">Drop a PDF here or click to browse</div>
+            <div class="t2" id="dzSub">Only .pdf files are supported</div>
+          </div>
+          <input type="file" id="fileInput" accept="application/pdf" hidden>
+        </div>
+        <button class="btn" id="uploadBtn" disabled>Upload &amp; Index</button>
+      </div>
+      <div id="status"></div>
+    </div>
+
+    <div class="card chat-card">
+      <div class="chat-head"><span class="live-dot"></span> Ask a question</div>
+      <div class="messages" id="messages">
+        <div class="empty" id="emptyState">
+          <div class="big">💬</div>
+          <h3>Ask anything about your documents</h3>
+          <p>Upload a PDF above, then ask a question. Answers are grounded only in your
+             uploaded documents, with sources you can inspect.</p>
+        </div>
+      </div>
+      <div class="composer">
+        <input type="text" id="q" placeholder="Type your question…" autocomplete="off">
+        <button class="send" id="sendBtn"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

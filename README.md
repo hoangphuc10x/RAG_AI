@@ -68,9 +68,10 @@ pip install -r requirements.txt
 
 ```bash
 python app.py
+venv/bin/python app.py
 ```
 
-Mở trình duyệt tại <http://127.0.0.1:5055>, sau đó:
+Mở trình duyệt tại <http://127.0.0.1:5000>, sau đó:
 1. **Upload một file PDF** → hệ thống tự lưu vào `docs/` và dựng lại index.
 2. **Gõ câu hỏi** → chatbot trả lời kèm trích dẫn nguồn.
 
